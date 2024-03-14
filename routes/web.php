@@ -16,3 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class MijnController extends Controller
+{
+    public function nieuwePagina()
+    {
+        return view('test.blade.php');
+    }
+}

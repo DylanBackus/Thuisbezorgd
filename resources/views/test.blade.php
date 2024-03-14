@@ -10,5 +10,6 @@
     </style>
 </head>
 <body>
-    <a href="test.blade.php">Test</a>
+    <h1><a href="test.blade.php">page 2</a></h1>
+</body>
 </html>
