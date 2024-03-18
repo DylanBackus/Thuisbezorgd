@@ -14,16 +14,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('posts');
 });
-namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+Route::get('/post', function () {
+    return view('post');
+});
 
-class MijnController extends Controller
-{
-    public function nieuwePagina()
-    {
-        return view('test.blade.php');
+Route::get('/post2', function () {
+    return view('post2');
+});
+
+Route::get('posts/{post}', function ($slug) {
+    $path = __DIR__ . "/../resources/posts/{$slug}.html";
+
+    if (! file_exists($path)) {
+        return redirect('/');
     }
-}
+
+    $post = file_get_contents($path);
+
+    return view ('post', [
+        
+    ])
+});
