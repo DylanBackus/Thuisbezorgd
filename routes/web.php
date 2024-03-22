@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('posts');
+    return view('index');
 });
 
 Route::get('/post', function () {
@@ -26,7 +26,7 @@ Route::get('/post2', function () {
 });
 
 Route::get('posts/{slug}', function ($slug) {
-    $path = resource_path("posts/{$slug}.html");
+    $path = resource_path("index/{$slug}.html");
 
     if (!file_exists($path)) {
         return redirect('/');

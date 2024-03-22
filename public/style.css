@@ -1,9 +1,28 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
 body{
-    background: rgb(255, 236, 212);
-    color: cadetblue;
-    max-width: 600px;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1200px;
     font-family: sans-serif;
     text-decoration: none;
 }
 
+.sam-sulek-img{
+    z-index: 1;
+    width: 100%;
+}
+
+.promo-top{
+    background-color: red;
+    height: 50px;
+    width: 100%;
+}
+
+.mo-footer{
+    z-index: 99;
+    width: 100%;
+}

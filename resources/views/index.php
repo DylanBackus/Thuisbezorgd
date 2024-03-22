@@ -7,13 +7,10 @@
     <title>Posts</title>
 </head>
 <body>
-    <article>
-        <h1> <a href="/post">first post</a></h1>
-        <p>first post</p>
-    </article>
-    <article>
-    <h1> <a href="/post2">Second post</a></h1>
-        <p>Second post</p>
-    </article>
+    <div class="promo-top">
+
+    </div>  
+    <img class="sam-sulek-img" src="media/sam-sulek.png">
+    <ing class="mo-footer" src="media/mb-nutrition-footer.png">
 </body>
 </html>
