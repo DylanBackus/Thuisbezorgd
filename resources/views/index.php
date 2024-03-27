@@ -10,7 +10,12 @@
     <div class="promo-top">
 
     </div>  
-    <img class="sam-sulek-img" src="media/sam-sulek.png">
-    <ing class="mo-footer" src="media/mb-nutrition-footer.png">
+        <img src="media/sam-sulek.png" class="main-image">
+        <div class="image-overlay">
+            <div class="groeicafe-text-container">
+                <h1 class="groeicafe-text">HET GROEICAFE</h1>
+            </div>
+        </div>
+
 </body>
 </html>

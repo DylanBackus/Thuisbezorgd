@@ -12,17 +12,45 @@ body{
 }
 
 .sam-sulek-img{
-    z-index: 1;
     width: 100%;
 }
 
 .promo-top{
-    background-color: red;
-    height: 50px;
+    background: linear-gradient(90deg, rgba(142,104,43,1) 0%, rgba(199,162,77,1) 47%, rgba(142,104,43,1) 100% );
+    height: 35px;
     width: 100%;
 }
 
 .mo-footer{
-    z-index: 99;
     width: 100%;
+}
+
+.main-image{
+    width: 100%;
+    background-image: url("media/sam-sulek.png");
+}
+
+.image-overlay{
+    position: absolute;
+    margin-top: 35px;
+    width: 100%;
+    height: 855px;
+}
+
+.groeicafe-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    background-color: #0000;
+}
+
+.groeicafe-text{
+    background: -webkit-linear-gradient(0deg, rgb(202, 190, 171) 20%, rgb(255, 202, 56) 47%, rgb(210, 201, 187) 80% );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 125px;
+
 }
