@@ -15,7 +15,7 @@ class MenuController extends Controller
         // Retrieve all menu items from the database
         $menuItems = Menu::all();
 
-        // Return the menu items as a JSON response
+        // Return the menu items as a JSON response dwadhowa
         return view('menu.index', ['menuItems' => $menuItems]);
     }
 
