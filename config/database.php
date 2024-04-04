@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Support\Str;
 
 return [
@@ -63,35 +62,24 @@ return [
             ]) : [],
         ],
 
-        'pgsql' => [
-            'driver' => 'pgsql',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
-            'charset' => 'utf8',
+        // Configuratie voor HeidiSQL-verbinding
+        'heidisql' => [
+            'driver' => 'mysql',
+            'host' => env('HEIDISQL_DB_HOST', '127.0.0.1'),
+            'port' => env('HEIDISQL_DB_PORT', '3306'),
+            'database' => env('HEIDISQL_DB_DATABASE', 'forge'),
+            'username' => env('HEIDISQL_DB_USERNAME', 'forge'),
+            'password' => env('HEIDISQL_DB_PASSWORD', ''),
+            'unix_socket' => env('HEIDISQL_DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
             'prefix_indexes' => true,
-            'search_path' => 'public',
-            'sslmode' => 'prefer',
+            'strict' => true,
+            'engine' => null,
         ],
 
-        'sqlsrv' => [
-            'driver' => 'sqlsrv',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', 'localhost'),
-            'port' => env('DB_PORT', '1433'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
-            'charset' => 'utf8',
-            'prefix' => '',
-            'prefix_indexes' => true,
-            // 'encrypt' => env('DB_ENCRYPT', 'yes'),
-            // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
-        ],
+        // Andere databaseverbindingen hier...
 
     ],
 

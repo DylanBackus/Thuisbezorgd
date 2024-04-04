@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MenuController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,28 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('/post', function () {
-    return view('post');
-});
-
-Route::get('/post2', function () {
-    return view('post2');
-});
-
-Route::get('posts/{slug}', function ($slug) {
-    $path = resource_path("index/{$slug}.html");
-
-    if (!file_exists($path)) {
-        return redirect('/');
-    }
-
-    $postContent = file_get_contents($path);
-
-    return view('post', [
-        'postContent' => $postContent,
-    ]);
-});
+Route::get('/menu', [MenuController::class, 'index'])->name('menu.index');
